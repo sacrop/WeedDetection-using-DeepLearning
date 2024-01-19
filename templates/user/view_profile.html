@@ -1,0 +1,37 @@
+{% extends "user/user_index.html" %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+        th,td{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form>
+                  <h5 class="fw-bold fs-3 fs-xxl-5 lh-sm mb-3 text-white" align="center">MY PROFILE</h5>
+
+    <table class="table table-active">
+        <tr>
+            <th>Name</th>
+            <td><input type="text" name="t" value="{{ data.name }}" class="form-control" readonly></td>
+        </tr>
+        <tr>
+            <th>Contact</th>
+            <td><input type="text" name="t1" value="{{ data.contact }}" class="form-control" readonly></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="text" name="t2" value="{{ data.email }}" class="form-control" readonly></td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}

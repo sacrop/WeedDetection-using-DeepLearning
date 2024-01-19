@@ -1,0 +1,41 @@
+{% extends "admin/admin_index.html" %}
+{% block body %}
+<html>
+<head>
+    <style>
+        th,td{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+              <h5 class="fw-bold fs-3 fs-xxl-5 lh-sm mb-3 text-white" align="center">VIEW USERS</h5>
+
+  <table class="table table-stripped" width="500" border="1">
+    <tr bgcolor="black">
+      <th scope="col">#</th>
+      <th scope="col">USERNAME</th>
+           <th scope="col">EMAIL</th>
+      <th scope="col">CONTACT</th>
+
+
+    </tr>
+     {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i['name'] }}</td>
+
+    <td>{{ i['email']}}</td>
+    <td>{{ i['contact']}}</td>
+
+
+
+  </tr>
+    {% endfor %}
+
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}
